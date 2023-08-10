@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.left-column {
+    background-color: white;
+    color: var(--primary-font-color);
+    display: flex;
+    flex-direction: column;
+    .content {
+        margin: 0 20px;
+        flex: 1;
+        align-self: center;
+        justify-content: center;
+        max-width: 590px;
+    }
+}
+
+.right-column {
+    background-color: #fbfbfb;
+    color: var(--primary-font-color);
+    display: none;
+    .content {
+        width: 415px;
+        align-self: center;
+        margin: 45px;
+        padding-bottom: 70px;
+    }
+}
+
+.content-wrapper {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 990px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .left-column {
+        width: 50%;
+        .content {
+            align-self: flex-end;
+            margin: 0 60px 0 40px;
+        }
+    }
+    .right-column {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        .content {
+            align-self: flex-start;
+        }
+    }
+    .buy-now-action {
+        display: none;
+    }
+    .confirmation .left-column {
+        .content {
+            width: 80%;
+        }
+    }
+}

@@ -1,0 +1,461 @@
+.logo {
+    text-align: center;
+    .rally-logo {
+        height: 60px;
+    }
+    margin: 35px 0;
+}
+
+.rally-rights {
+    color: #808080;
+    font-size: 14px;
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.checkout,
+.confirmation {
+    .rally-heading {
+        font-size: var(--font-size-lg);
+        line-height: 24px;
+    }
+    rally-purchase-button {
+        margin-top: 10px;
+        display: block;
+    }
+    .rally-order-summary-block {
+        .rally-summary-info {
+            color: var(--secondary-font-color) !important;
+        }
+    }
+
+    .rally-credit-card-block {
+        margin-bottom: 50px;
+    }
+    .rally-express-button button {
+        background-color: rgb(34, 31, 32);
+    }
+
+    button::before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .rally-express-heading:not(.rally-express-subheading),
+    .rally-separator-heading {
+        background-color: #acd5e9;
+        border-radius: 10px;
+        padding: 5px 20px;
+        top: calc(var(--font-size-xs) / -1);
+    }
+    .rally-express-heading.rally-express-subheading {
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        bottom: calc(var(--font-size-xs) / -1);
+    }
+
+    .rally-total-line {
+        font-size: var(--font-size-xl);
+    }
+
+    .rally-heading,
+    .rally-summary-label,
+    .rally-line-item-name,
+    .rally-line-total,
+    .rally-summary-cart,
+    .rally-total-line .rally-summary-info,
+    .rally-toggle-description.active {
+        color: #074371 !important;
+    }
+    .rally-express-heading-wrapper {
+        position: relative;
+        padding: 30px 25px 20px;
+        border: 1px solid var(--border-color);
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 40px;
+    }
+    .rally-toggle {
+        display: none;
+    }
+
+    .rally-toggle-wrapper,
+    .rally-shipping-options-pending {
+        background-color: #fbfbfb;
+    }
+}
+
+// Desktop styles
+@media (min-width: 990px) {
+    .rally-trust-reviews {
+        display: none;
+    }
+    .checkout,
+    .confirmation {
+        .rally-summary-line.rally-total-line {
+            margin-top: 10px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        .right-column .rally-order-summary-block {
+            margin-top: 95px;
+        }
+        .rally-separator {
+            position: relative;
+        }
+    }
+    .checkout {
+        .rally-summary-header {
+            opacity: 0;
+        }
+    }
+
+    .rally-shipping-address-block {
+        padding-top: 15px;
+        .rally-heading,
+        .rally-field-wrapper.rally-form-group {
+            margin-bottom: 15px;
+        }
+        .rally-form-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            .rally-field-wrapper:not(.rally-field-hidden) {
+                width: 100%;
+            }
+            .rally-field-wrapper.rally-firstName,
+            .rally-field-wrapper.rally-lastName,
+            .rally-field-wrapper.rally-country {
+                flex-basis: 50%;
+            }
+            .rally-field-wrapper.rally-country {
+                flex-grow: 1;
+            }
+            .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty) {
+                flex-basis: 25%;
+            }
+            .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty) + .rally-field-wrapper.rally-zip {
+                flex-basis: 25%;
+            }
+            .rally-field-wrapper.rally-province {
+                flex-shrink: 1;
+                flex-basis: auto;
+                width: auto;
+            }
+            .rally-field-wrapper.rally-address1 {
+                flex-basis: 100%;
+            }
+            .rally-field-wrapper.rally-address2 {
+                flex-basis: 100%;
+            }
+            .rally-field-wrapper.rally-zip {
+                flex-basis: 50%;
+            }
+            & > .rally-field-wrapper.rally-firstName,
+            & > .rally-field-wrapper.rally-country,
+            & > .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty) {
+                padding-right: 7.5px;
+            }
+            & > .rally-field-wrapper.rally-lastName,
+            & > .rally-field-wrapper.rally-province.rally-field-select:not(.rally-empty),
+            & > .rally-field-wrapper.rally-zip {
+                padding-left: 7.5px;
+            }
+            .flex-basis-quarter {
+                flex-basis: 25%;
+            }
+            .flex-basis-half {
+                flex-basis: 50%;
+            }
+            @media (min-width: 1400px) {
+                .rally-field-wrapper.rally-address1 {
+                    flex-basis: calc(((100% - 15px) / 3) * 2);
+                }
+                .rally-field-wrapper.rally-address2 {
+                    flex-basis: calc((100% - 15px) / 3);
+                }
+                & > .rally-field-wrapper.rally-address1 {
+                    margin-right: 7.5px;
+                }
+                & > .rally-field-wrapper.rally-address2 {
+                    margin-left: 7.5px;
+                }
+            }
+        }
+    }
+    .rally-credit-card-block {
+        .rally-credit-card {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .rally-credit-card > *:nth-child(1) {
+            flex-basis: 100%;
+        }
+        .rally-credit-card > *:nth-child(2) {
+            flex-basis: 50%;
+            padding-right: 15px;
+        }
+
+        .rally-credit-card > *:nth-child(3),
+        .rally-credit-card > *:nth-child(4) {
+            flex-basis: 25%;
+        }
+        .rally-credit-card > *:nth-child(3) {
+            padding-right: 15px;
+        }
+    }
+}
+
+// Mobile only styles
+
+@media (max-width: 989px) {
+    .confirmation {
+        .left-column .content {
+            width: 100%;
+        }
+    }
+
+    .confirmation.not-authenticated {
+        .left-column .content .rally-rights {
+            position: fixed;
+            bottom: 0;
+            max-width: 590px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    .confirmation .left-column .content {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+
+    .confirmation.not-authenticated {
+        .left-column .content .rally-rights {
+            max-width: calc(100% - 40px);
+        }
+    }
+}
+
+.rally-main-container {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.content-wrapper {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+    .rally-initial-loader-hide ~ & {
+        opacity: 1;
+    }
+}
+
+.confirmation.not-authenticated {
+    flex-direction: column;
+    align-items: center;
+    .rally-order-summary-block {
+        display: none;
+    }
+    .left-column {
+        display: flex;
+        flex-direction: column;
+        width: 590px;
+        .content {
+            margin: 0;
+            width: 100%;
+        }
+    }
+    .right-column {
+        display: none;
+    }
+    .rally-trust-reviews {
+        display: none;
+    }
+}
+
+@media (max-width: 610px) {
+    .confirmation.not-authenticated {
+        .left-column {
+            width: 100%;
+        }
+    }
+}
+.shipping-calendar-container,
+.shipping-calendar-container-disabled {
+    font-family: var(--font-family);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.shipping-calendar-container-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    & > * {
+        pointer-events: none;
+    }
+}
+
+.rally-date-picker-block {
+    h4 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background-color: #f9f9fa;
+        border-radius: 10px;
+        padding: 20px 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(0, 0, 0, 0.06) 0 1px 2px 0;
+    }
+}
+
+.react-datepicker {
+    line-height: 27px;
+    background-color: #113053 !important;
+    border-radius: 25px !important;
+
+    .react-datepicker__navigation {
+        top: 24px;
+    }
+    .react-datepicker__navigation--previous--disabled,
+    .react-datepicker__navigation--next--disabled {
+        display: none;
+    }
+
+    .react-datepicker__header {
+        background: none;
+        border: none;
+        padding-top: 20px !important;
+
+        .react-datepicker__current-month {
+            width: max-content;
+            background-color: #235591;
+            text-transform: uppercase;
+            color: #fff !important;
+            padding: 3px 10px;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: var(--font-family);
+        }
+
+        .react-datepicker__day-names {
+            margin-top: 20px;
+            border-bottom: solid 2px #005595;
+        }
+    }
+
+    .react-datepicker__day,
+    .react-datepicker__day-name {
+        width: 9vw !important;
+        max-width: 45px !important;
+    }
+
+    .react-datepicker__day-name {
+        font-size: calc((min(4vw, 16px)));
+        margin: calc(min(4px, 1vw)) !important;
+        color: #999;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .react-datepicker__month {
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+
+    .react-datepicker__day {
+        margin: calc(min(4px, 1vw)) !important;
+        line-height: calc(min(45px, 9vw)) !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-size: calc((min(5vw, 20px)));
+    }
+
+    .react-datepicker__day,
+    .react-datepicker__day-name {
+        width: 9vw !important;
+        max-width: 45px !important;
+    }
+
+    .react-datepicker__day,
+    .react-datepicker__day:hover {
+        border-radius: 50%;
+    }
+
+    .react-datepicker__day--today {
+        cursor: not-allowed !important;
+        color: #fff !important;
+        background-color: #235591 !important;
+    }
+
+    .react-datepicker__day--selected {
+        background-color: #fff !important;
+        color: #113053 !important;
+    }
+
+    .react-datepicker__day-names,
+    .react-datepicker__week {
+        white-space: nowrap;
+    }
+
+    .react-datepicker__day--disabled {
+        cursor: not-allowed !important;
+        color: rgba(255, 255, 255, 0.2) !important;
+        background-color: #113053 !important;
+        margin: calc(min(4px, 1vw)) !important;
+        line-height: calc(min(45px, 9vw)) !important;
+        font-size: calc((min(5vw, 20px)));
+    }
+}
+
+.rally-order-notes-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    .rally-order-notes-heading {
+        background: linear-gradient(to right, #cfa77d 0, #b08f6e 50%, #b08f6e 100%, #207cca 100%, #b08f6e 100%);
+        color: #fff;
+        padding: 20px;
+        border-radius: 20px 20px 0 0;
+        font-size: 16px;
+        font-weight: 900;
+    }
+    .rally-icon-container-gift {
+        position: absolute;
+        left: 15px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        opacity: 0.2;
+        transform: rotate(20deg);
+        img {
+            max-width: 100%;
+        }
+    }
+    textarea {
+        height: 150px !important;
+        border-radius: 0 0 20px 20px;
+        resize: none;
+        &,
+        &:focus {
+            box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0 !important;
+        }
+    }
+}
+
+.rally-shipping-badges-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    p {
+        background-color: #22548f;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 20px;
+    }
+}
